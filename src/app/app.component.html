@@ -1,0 +1,63 @@
+<div class="min-h-screen flex justify-center items-center">
+  <div class="">
+    <div class="text-center font-semibold">
+      <h1 class="text-5xl">
+        <span class="text-blue-700 tracking-wide">Flexible </span>
+        <span>Plans</span>
+      </h1>
+      <p class="pt-6 text-xl text-gray-400 font-normal w-full px-8 md:w-full">
+        Choose a plan that works best for you and<br />
+        your team.
+      </p>
+    </div>
+    <div class="pt-24 flex flex-row">
+      <ds-card class="w-96 pr-16">
+        <h1 slot="header" class="text-black font-semibold text-2xl">Basic</h1>
+        <ds-price slot="header" [amount]="10" unit="$" subject="user"></ds-price>
+
+        <ds-bullet-point class="block mb-5">Get started with <span class="text-black">messaging</span></ds-bullet-point>
+        <ds-bullet-point class="block mb-5">Flexible <span class="text-black">team meetings</span></ds-bullet-point>
+        <ds-bullet-point><span class="text-black">5 TB</span> cloud storage</ds-bullet-point>
+
+        <button slot="footer" class="mt-8" ds-button="primary">
+          <span class="font-medium">Choose Plan</span>
+          <ds-icon class="pl-2" type="east"></ds-icon>
+        </button>
+      </ds-card>
+
+      <ds-card variant="highlight" class="w-80 transform scale-125">
+        <h1 slot="header" class="text-white font-semibold text-2xl">Startup</h1>
+        <ds-price slot="header" [amount]="24" unit="$" subject="user"></ds-price>
+
+        <ds-bullet-point class="block mb-5">All features in <span class="text-white">Basic</span></ds-bullet-point>
+        <ds-bullet-point class="block mb-5">Flexible <span class="text-white">call scheduling</span></ds-bullet-point>
+        <ds-bullet-point><span class="text-white">15 TB</span> cloud storage</ds-bullet-point>
+
+        <button slot="footer" class="mt-8" ds-button="primary">
+          <span class="font-medium">Choose Plan</span>
+          <ds-icon class="pl-2" type="east" size="small"></ds-icon>
+        </button>
+
+        <p
+          slot="label"
+          class="bg-blue-700 font-semibold px-4 py-1 rounded-full uppercase text-xs"
+        >
+          Popular
+        </p>
+      </ds-card>
+      <ds-card class="w-96 pl-16">
+        <h1 slot="header" class="text-black font-semibold text-2xl">Enterprise</h1>
+        <ds-price slot="header" [amount]="35" unit="$" subject="user"></ds-price>
+
+        <ds-bullet-point class="block mb-5">All features in <span class="text-black">Startup</span></ds-bullet-point>
+        <ds-bullet-point class="block mb-5">Growth <span class="text-black">oriented</span></ds-bullet-point>
+        <ds-bullet-point><span class="text-black">Unlimited</span> cloud storage</ds-bullet-point>
+
+        <button slot="footer" class="mt-8" ds-button="warning">
+          <span class="font-medium">Choose Plan</span>
+          <ds-icon class="pl-2" type="east" size="small"></ds-icon>
+        </button>
+      </ds-card>
+    </div>
+  </div>
+</div>

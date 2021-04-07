@@ -1,0 +1,19 @@
+<div
+  class="p-8 bg-white text-center rounded-3xl shadow-xl"
+  [ngClass]="{
+    'bg-gray-900': variant === 'highlight',
+    'text-white': variant === 'highlight'
+  }"
+>
+  <div #header>
+    <ng-content select="[slot='header']"></ng-content>
+  </div>
+  <hr class="mt-4 border-1" *ngIf="(header.innerHTML || '').trim()" />
+  <div class="pt-8">
+    <ng-content></ng-content>
+  </div>
+  <ng-content select="[slot='footer']"></ng-content>
+  <div #label class="absolute top-4 right-4" *ngIf="(header.innerHTML || '').trim()">
+    <ng-content select="[slot='label']"></ng-content>
+  </div>
+</div>
